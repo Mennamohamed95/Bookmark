@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmarker</title>
+</head>
+<body>
+
+
+
+
+    <main class="bg container-fluid py-4 position-relative vh-100">
+        <div class="container mx-auto text-center my-4 py-3">
+            <h1 class="mx-auto">Bookmarker</h1>
+        </div>
+        <div class="container border-style py-3">
+            <h3 class="text-center"><i class="fa-solid fa-bookmark bookmark1"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark bookmark2"></i></h3>
+            <label for="siteName" class="ms-2 fw-bold mb-2"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input oninput="validateInput(this)" type="text" placeholder="Bookmark Name" name="siteName" id="siteName" class="form-control mb-3 ">
+            <label for="siteUrl" class="ms-2 fw-bold mb-2"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input oninput="validateInput(this)" type="text" placeholder="Website URL" name="siteUrl" id="siteUrl" class="form-control mb-3 ">
+            <div class="button w-100 text-center">
+                <button onclick="addSite()" class="btn btn-style">submit</button>
+            </div>
+            
+        </div>
+        
+            <table class="container table bg-light text-center mt-3">
+                <thead>
+                <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                </tr>
+                
+            </thead>
+            <tbody id="box">
+              
+            </tbody>
+            </table>
+
+
+            <div id="alertForm" class="alert d-flex justify-content-center align-items-center d-none">
+                   <div class=" alert-inner bg-light shadow-lg border rounded-3  mx-auto p-3">
+                <div class="d-flex justify-content-between py-2 ">
+                    <div class="circle w-25 ms-0">
+                    <i class="fa-solid fa-circle" style="color: #d01b1b;"></i>
+                    <i class="fa-solid fa-circle" style="color: #d0d408;"></i>
+                    <i class="fa-solid fa-circle" style="color: #11ee14;"></i>
+                </div>
+                <div><button onclick="closeAlert()" class="border-0"><i class="fa-solid fa-xmark"></i></button></div>
+                </div>
+                <h4 class="py-2">Site Name or Url is not valid, Please follow the rules below :</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fa-regular fa-circle-right" style="color: #dd0303;"></i> Site name must contain at least 3 characters</li>
+                    <li><i class="fa-regular fa-circle-right" style="color: #dd0303;"></i> Site URL must be a valid one</li>
+                </ul>
+            </div>
+            </div>
+         
+            
+       
+    </main>
+    
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
